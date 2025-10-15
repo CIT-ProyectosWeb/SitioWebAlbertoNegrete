@@ -1,13 +1,11 @@
 
 /* Estilos para el Navbar */
-
 .navbar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 36px 64px;
+    padding: 40px 64px;
     background-color: black;
-    position: relative;
 }
 
 .nav-links {
@@ -15,7 +13,6 @@
     padding: 0;
     margin: 0;
     display: flex;
-    transition: all 0.5s ease;
 }
 
 .nav-links li {
@@ -25,14 +22,12 @@
 .nav-links a {
     text-decoration: none;
     color: #FFFFFF;
-    font-size: 17px;
+    font-weight: 200;
     padding: 8px 24px;
-    border-radius: 30px;
-    transition: background-color 0.3 ease;
 }
 
 .nav-links a:hover {
-    background-color: #e91e63;
+    color: #ce5b0c;
 }
 
 .menu-icon {
@@ -49,7 +44,7 @@
     height: 3px;
     background-color: #FFFFFF;
     margin: 5px 0;
-    transition: all 0.3s ease;
+    
 }
 
 #menu-toggle {
@@ -73,7 +68,7 @@
         height: 0;
         overflow: hidden;
         flex-direction: column;
-        background-color: #424242;
+        background-color: black;
         text-align: center;
         transition: heigth 0.5s ease;
     }
@@ -87,21 +82,23 @@
     .nav-links a {
         width: 100%;
         padding: 10px 20px;
+        text-align: center;
     }
 
     #menu-toggle:checked + .menu-icon + .nav-links {
-        height: 100vh;
+        height: auto;
+        padding: 10px 20px;
     }
 
-    #menu-toggle:checked + .menu-icon + .line:nth-child(1) {
+    #menu-toggle:checked + .menu-icon .line:nth-child(1) {
         transform: rotate(45deg) translate(15px, 3px);
     }
 
-    #menu-toggle:checked + .menu-icon + .line:nth-child(2) {
+    #menu-toggle:checked + .menu-icon .line:nth-child(2) {
         transform: scale(0);
     }
 
-    #menu-toggle:checked + .menu-icon + .line:nth-child(3) {
+    #menu-toggle:checked + .menu-icon .line:nth-child(3) {
         transform: rotate(-45deg) translate(15px, -4px);
     }
 }
