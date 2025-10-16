@@ -65,16 +65,23 @@
 }
 
 @media (max-width: 768px) {
-
     .footer-container {
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
+        gap: 25px;
+        padding: 0;
+        margin: 0 auto;
+        width: 100%;
+        margin-bottom: 40px;
     }
 
     .footer-section {
         width: 100%;
+        max-width: 400px;
         text-align: center;
+        margin: 0 auto;
     }
 
     .footer-section h3,
@@ -83,8 +90,14 @@
     }
 
     .footer-section img.footer-imagen {
-        width: 50%;
-        margin: 0 auto;
+        width: 55%;
+        max-width: 220px;
+        margin: 0 auto 15px auto;
         display: block;
+        margin-bottom: -5px;
+    }
+
+    .footer-section .fa-brands {
+        margin: 0 10px;
     }
 }
