@@ -1,3 +1,4 @@
+
 /* Navbar general */
 body {
     margin: 0;
@@ -27,7 +28,7 @@ body {
 }
 
 .logo {
-    height: 60px;
+    height: 70px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -61,7 +62,6 @@ body {
     color: #ce5b0c;
 }
 
-/* Ícono del menú (mobile) */
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -84,6 +84,11 @@ body {
 }
 
 @media(max-width: 768px) {
+
+    .logo {
+        height: 59px;
+    }
+
     .navbar {
         padding: 16px 24px;
     }
