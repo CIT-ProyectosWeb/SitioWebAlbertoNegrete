@@ -94,7 +94,6 @@ button:hover {
 /* Mapa debajo */
 .map-container {
   width: 100%;
-  filter: grayscale(100%);
   margin-top: -5px;
 }
 
