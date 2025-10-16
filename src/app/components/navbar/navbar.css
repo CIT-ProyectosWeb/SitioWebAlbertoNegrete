@@ -1,5 +1,4 @@
-
-/* Estilos para el Navbar */
+/* Navbar general */
 body {
     margin: 0;
     padding-top: 100px;
@@ -9,10 +8,10 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    padding: 40px 130px;
-    background-color: black;
+    padding: 20px 130px;
+    background-color: #FFFFFF;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,29 +20,48 @@ body {
     z-index: 1000;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
 .nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .nav-links li {
-    margin-left: 16px;
+    margin-left: 24px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #FFFFFF;
-    font-weight: 200;
+    color: black;
+    font-weight: 300;
     padding: 8px 16px;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #ce5b0c;
 }
 
+/* Ícono del menú (mobile) */
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -54,10 +72,11 @@ body {
 }
 
 .menu-icon .line {
-    width: 30px;
+    width: 28px;
     height: 3px;
-    background-color: #FFFFFF;
+    background-color: black;
     margin: 5px 0;
+    transition: all 0.3s ease;
 }
 
 #menu-toggle {
@@ -81,42 +100,42 @@ body {
         height: 0;
         overflow: hidden;
         flex-direction: column;
-        align-items: center; 
-        justify-content: center;  
-        background-color: black;
+        align-items: center;
+        justify-content: center;
+        background-color: #FFFFFF;
         text-align: center;
         transition: height 0.5s ease;
-        padding: 0;   
+        padding: 0;
     }
 
     .nav-links li {
-        margin: 10px 0;   
+        margin: 10px 0;
         padding: 0;
-        width: auto;      
+        width: auto;
     }
 
     .nav-links a {
-        display: inline-block;     
-        padding: 12px 0;           
+        display: inline-block;
+        padding: 12px 0;
         text-align: center;
-        color: #fff;
+        color: black;
         font-size: 18px;
     }
 
-    #menu-toggle:checked + .menu-icon + .nav-links {
+    #menu-toggle:checked+.menu-icon+.nav-links {
         height: auto;
         padding: 20px 0;
     }
 
-    #menu-toggle:checked + .menu-icon .line:nth-child(1) {
+    #menu-toggle:checked+.menu-icon .line:nth-child(1) {
         transform: rotate(45deg) translate(15px, 3px);
     }
 
-    #menu-toggle:checked + .menu-icon .line:nth-child(2) {
+    #menu-toggle:checked+.menu-icon .line:nth-child(2) {
         transform: scale(0);
     }
 
-    #menu-toggle:checked + .menu-icon .line:nth-child(3) {
+    #menu-toggle:checked+.menu-icon .line:nth-child(3) {
         transform: rotate(-45deg) translate(15px, -4px);
     }
 }
