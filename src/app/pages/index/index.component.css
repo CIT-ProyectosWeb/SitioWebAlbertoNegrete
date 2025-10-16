@@ -1,0 +1,95 @@
+/* 🌎 Sección general */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* pantalla completa */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+}
+
+/* 🎥 Video de fondo */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* 🌫️ Capa semitransparente */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.4)
+  ); /* degradado oscuro */
+  z-index: 1;
+}
+
+/* ✨ Contenido centrado */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  max-width: 750px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #e0e0e0;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+/* 🔘 Botón */
+.hero-content button {
+  background-color: #fa6829; /* naranja quemado CIT / Alberto Negrete */
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content button:hover {
+  background-color: #d85a23;
+  transform: translateY(-2px);
+}
+
+/* 📱 Responsivo */
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content button {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+}
