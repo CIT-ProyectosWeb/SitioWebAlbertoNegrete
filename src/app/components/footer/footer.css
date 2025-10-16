@@ -1,11 +1,11 @@
 
-/* Footer Maestría en Ingenieria */
+/* Footer Gobierno */
+
 .footer {
-    background-color: #ce5b0c;
+    background-color: #8c8c8c;
     color: #fff;
     padding: 5px 0;
     text-align: center;
-    margin-top: 40px;
 }
 
 .footer-container {
@@ -14,8 +14,8 @@
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px;
-    gap: 20px;
+    padding: 20px;
+    gap: 40px;
     margin-bottom: 30px;
 }
 
@@ -26,21 +26,12 @@
     text-align: left;
 }
 
-.footer-section:nth-child(2) {
-    flex: 1.2;
-}
-
-.footer-section:nth-child(3) {
-    flex: 0.5;
-    margin-left: auto;
-}
-
 .footer-section img.footer-imagen {
     margin-top: 15px;
-    width: 70%; /* Ajusta la imagen al tamaño de su contenedor */
-    height: auto; /* Mantiene la relación de aspecto */
-    display: block; /* Asegura que la imagen sea un bloque */
-    margin-left: 0%; /* Mueve la imagen un 10% hacia la izquierda */
+    width: 85%;
+    height: auto;
+    display: block;
+    margin-left: 0%;
 }
 
 .footer-section h3 {
@@ -52,12 +43,17 @@
 .footer-section p {
     margin-bottom: 0px;
     text-align: left;
-    line-height: 1.2; 
+    line-height: 1.3;
     font-weight: 200;
 }
 
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+}
+
 .footer-section .fa-brands {
-    font-size: 25px;
+    font-size: 28px;
     margin: 0 15px;
     transition: transform 0.3s ease;
     margin-bottom: 50px;
@@ -65,9 +61,30 @@
 }
 
 .footer-section .fa-brands:hover {
-    transform: scale(1.2); /* Efecto de agrandado al pasar el mouse */
+    transform: scale(1.2);
 }
 
-* {
-    box-sizing: border-box;
+@media (max-width: 768px) {
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer-section h3,
+    .footer-section p {
+        text-align: center;
+    }
+
+    .footer-section img.footer-imagen {
+        width: 50%;
+        margin: 0 auto;
+        display: block;
+    }
 }
