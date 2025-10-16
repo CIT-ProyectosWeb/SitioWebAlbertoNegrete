@@ -1,0 +1,127 @@
+/* Contenedor principal */
+.contact-section {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #0d1b2a;
+  background-color: #ffffff;
+}
+
+/* Sección superior (texto + imagen) */
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 600px; /* 👈 ajusta la altura general */
+}
+
+/* Columna izquierda */
+.contact-form {
+  flex: 1;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.contact-form h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contact-form p {
+  margin: 3px 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+.input-group input {
+  flex: 1;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom-color: #0d1b2a;
+}
+
+button {
+  background-color: #0d1b2a;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 200px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1b263b;
+}
+
+/* Columna derecha: imagen */
+.contact-image {
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mapa debajo */
+.map-container {
+  width: 100%;
+  filter: grayscale(100%);
+  margin-top: -5px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contact-form,
+  .contact-image {
+    flex: none;
+    width: 100%;
+  }
+
+  .contact-image img {
+    height: 300px;
+  }
+
+  .contact-form {
+    padding: 40px 20px;
+  }
+}
