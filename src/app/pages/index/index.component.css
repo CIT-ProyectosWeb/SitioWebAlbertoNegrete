@@ -1,4 +1,4 @@
-/* 🌎 SECCIÓN HERO PRINCIPAL */
+/* SECCIÓN HERO PRINCIPAL */
 .hero-section {
   position: relative;
   width: 100%;
@@ -11,7 +11,7 @@
   z-index: 1;
 }
 
-/* 🎥 Video de fondo */
+/* Video de fondo */
 .hero-video {
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
   z-index: 0;
 }
 
-/* 🌫️ Capa semitransparente */
+/* Capa semitransparente */
 .overlay {
   position: absolute;
   top: 0;
@@ -33,7 +33,7 @@
   z-index: 1;
 }
 
-/* ✨ Contenido centrado */
+/* Contenido centrado */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -59,7 +59,7 @@
 
 /* 🔘 Botón principal */
 .hero-content button {
-  background-color: #fa6829;
+  background-color: #ce5b0c;
   color: #fff;
   border: none;
   padding: 14px 30px;
@@ -72,7 +72,7 @@
 }
 
 .hero-content button:hover {
-  background-color: #d85a23;
+  background-color: #ce5b0c;
   transform: translateY(-2px);
 }
 
@@ -90,7 +90,7 @@
   border: none;
 }
 
-/* 📱 Responsivo */
+/* Responsivo */
 @media (max-width: 900px) {
   .hero-content h1 {
     font-size: 2.2rem;
@@ -106,16 +106,16 @@
   }
 }
 
-/* 🌟 SECCIÓN “POR QUÉ ELEGIR A ALBERTO NEGRETE” */
+/* SECCIÓN “POR QUÉ ELEGIR A ALBERTO NEGRETE” */
 .about-section {
   position: relative;
-  background-color: #1b1f1b;
+  background-color: #000000;
   color: #fff;
-  padding: 100px 10%;
+  padding: 50px 10%;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 60vh;
   overflow: hidden;
   z-index: 5;
 }
@@ -131,7 +131,7 @@
   gap: 60px;
 }
 
-/* 📸 Imagen fija y centrada */
+/* Imagen fija y centrada */
 .about-image {
   flex: 1 1 45%;
   display: flex;
@@ -152,7 +152,7 @@
   width: 100%;
   max-width: 500px;
   border-radius: 15px;
-  box-shadow: 0 6px 25px rgb(206,91,12);
+  box-shadow: 0 6px 25px rgb(255, 255, 255);
   object-fit: cover;
   opacity: 1;
   transition: transform 1.5s ease;
@@ -162,7 +162,7 @@
   transform: scale(1.03);
 }
 
-/* 📝 Texto del lado derecho */
+/* Texto del lado derecho */
 .about-text {
   flex: 1 1 45%;
   opacity: 0;
@@ -185,7 +185,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 25px;
-  color: #d8d8d8;
+  color: #ffffff;
 }
 
 .about-text ul {
@@ -197,11 +197,11 @@
 
 .about-text ul li::before {
   content: "• ";
-  color: #fa6829;
+  color: #ffffff;
   font-weight: bold;
 }
 
-/* ✨ Animaciones */
+/* Animaciones */
 .fade-up {
   opacity: 0;
   transform: translateY(50px);
@@ -213,7 +213,7 @@
   transform: translateY(0) !important;
 }
 
-/* 📱 Responsivo ABOUT */
+/* Responsivo ABOUT */
 @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
@@ -228,4 +228,25 @@
   .image-wrapper img {
     max-width: 90%;
   }
+}
+
+/* Botón de Conoce más*/
+.hero-btn {
+  background-color: #ce5b0c;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hero-btn:hover {
+  background-color: #ce5b0c;
+  transform: translateY(-2px);
 }
