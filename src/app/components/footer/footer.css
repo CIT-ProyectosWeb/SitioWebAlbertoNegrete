@@ -1,6 +1,5 @@
 
-/* Footer Gobierno */
-
+/* Footer */
 .footer {
     background-color: #8c8c8c;
     color: #fff;
@@ -10,41 +9,42 @@
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: flex-start;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-    gap: 40px;
-    margin-bottom: 30px;
+    padding: 20px 40px;
+    gap: 80px;
 }
 
 .footer-section {
-    flex: 1;
-    min-width: 250px;
+    flex: 1 1 220px;
+    max-width: 260px;
+    min-width: 220px;
     padding: 10px;
-    text-align: left;
+    text-align: center;
 }
 
 .footer-section img.footer-imagen {
     margin-top: 15px;
-    width: 85%;
+    width: 100%;
     height: auto;
     display: block;
-    margin-left: 0%;
+    margin: 0 auto;
 }
 
 .footer-section h3 {
     margin-bottom: 10px;
-    font-weight: 400;
-    text-align: left;
+    font-weight: 500;
+    text-align: center;
 }
 
 .footer-section p {
-    margin-bottom: 0px;
-    text-align: left;
-    line-height: 1.3;
-    font-weight: 200;
+    margin-bottom: 0;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 300;
 }
 
 .footer-link {
@@ -54,9 +54,8 @@
 
 .footer-section .fa-brands {
     font-size: 28px;
-    margin: 0 15px;
+    margin: 0 10px;
     transition: transform 0.3s ease;
-    margin-bottom: 50px;
     color: #fff;
 }
 
@@ -64,40 +63,46 @@
     transform: scale(1.2);
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         text-align: center;
-        gap: 25px;
-        padding: 0;
-        margin: 0 auto;
-        width: 100%;
-        margin-bottom: 40px;
+        gap: 10px;
+        padding: 10px 20px;
+        margin-bottom: -140px;
     }
 
     .footer-section {
         width: 100%;
         max-width: 400px;
         text-align: center;
-        margin: 0 auto;
+        margin: 0;
+        padding: 5px 0;
     }
 
-    .footer-section h3,
+    .footer-section h3 {
+        margin-top: -75px;
+        margin-bottom: 6px;
+    }
+
     .footer-section p {
-        text-align: center;
+        margin-bottom: 4px;
+        line-height: 1.3;
     }
 
     .footer-section img.footer-imagen {
-        width: 55%;
-        max-width: 220px;
-        margin: 0 auto 15px auto;
+        width: 50%;
+        max-width: 170px;
+        margin: 0 auto 8px auto;
         display: block;
-        margin-bottom: -5px;
+        margin-top: 15px;
     }
 
     .footer-section .fa-brands {
-        margin: 0 10px;
+        margin: 0 8px;
+        font-size: 26px;
     }
 }

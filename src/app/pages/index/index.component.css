@@ -1,4 +1,4 @@
-/* 🌎 Sección general */
+/* 🌎 SECCIÓN HERO PRINCIPAL */
 .hero-section {
   position: relative;
   width: 100%;
@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   background-color: #000;
+  z-index: 1;
 }
 
 /* 🎥 Video de fondo */
@@ -28,10 +29,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.4)
-  ); /* degradado oscuro */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
   z-index: 1;
 }
 
@@ -58,9 +56,9 @@
   line-height: 1.5;
 }
 
-/* 🔘 Botón */
+/* 🔘 Botón principal */
 .hero-content button {
-  background-color: #fa6829; /* naranja quemado CIT / Alberto Negrete */
+  background-color: #fa6829;
   color: #fff;
   border: none;
   padding: 14px 30px;
@@ -103,5 +101,129 @@
   .hero-content button {
     padding: 12px 25px;
     font-size: 0.95rem;
+  }
+}
+
+/* 🌟 SECCIÓN “POR QUÉ ELEGIR A ALBERTO NEGRETE” */
+.about-section {
+  position: relative;
+  background-color: #1b1f1b;
+  color: #fff;
+  padding: 100px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+}
+
+/* Contenedor principal */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1300px;
+  gap: 60px;
+}
+
+/* 📸 Imagen fija y centrada */
+.about-image {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.image-wrapper {
+  position: sticky;
+  top: 100px; /* mantiene la imagen visible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 6px 25px rgb(206,91,12);
+  object-fit: cover;
+  opacity: 1;
+  transition: transform 1.5s ease;
+}
+
+.image-wrapper img:hover {
+  transform: scale(1.03);
+}
+
+/* 📝 Texto del lado derecho */
+.about-text {
+  flex: 1 1 45%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.about-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-text h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  color: #d8d8d8;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+.about-text ul li::before {
+  content: "• ";
+  color: #fa6829;
+  font-weight: bold;
+}
+
+/* ✨ Animaciones */
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-up.show {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* 📱 Responsivo ABOUT */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-wrapper {
+    position: relative;
+    top: 0;
+  }
+
+  .image-wrapper img {
+    max-width: 90%;
   }
 }
