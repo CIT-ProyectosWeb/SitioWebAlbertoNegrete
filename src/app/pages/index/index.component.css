@@ -1,8 +1,10 @@
-/* 🌎 SECCIÓN HERO PRINCIPAL */
+
+/* SECCIÓN PRINCIPAL */
+
 .hero-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* pantalla completa */
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -11,7 +13,6 @@
   z-index: 1;
 }
 
-/* 🎥 Video de fondo */
 .hero-video {
   position: absolute;
   top: 0;
@@ -22,7 +23,6 @@
   z-index: 0;
 }
 
-/* 🌫️ Capa semitransparente */
 .overlay {
   position: absolute;
   top: 0;
@@ -33,7 +33,6 @@
   z-index: 1;
 }
 
-/* ✨ Contenido centrado */
 .hero-content {
   position: relative;
   z-index: 2;
@@ -44,26 +43,28 @@
 }
 
 .hero-content h1 {
-  font-weight: 700;
+  font-weight: 200;
+  font-size: 3rem;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
 }
 
 .hero-content p {
   font-weight: 200;
+  font-size: 1.3rem;
   color: #e0e0e0;
   margin-bottom: 30px;
   line-height: 1.5;
 }
 
-/* 🔘 Botón principal */
 .hero-content button {
   background-color: #fa6829;
   color: #fff;
   border: none;
   padding: 14px 30px;
-  border-radius: 30px;
-  font-weight: 600;
+  border-radius: 25px;
+  font-weight: 200;
+  font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -74,37 +75,9 @@
   transform: translateY(-2px);
 }
 
-/* Mapa debajo */
-.map-container {
-  width: 100%;
-  filter: grayscale(100%);
-  margin-top: -5px;
-  margin-bottom: -10px;
-}
+/***************************************************************************************/
 
-.map-container iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-}
-
-/* 📱 Responsivo */
-@media (max-width: 900px) {
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .hero-content button {
-    padding: 12px 25px;
-    font-size: 0.95rem;
-  }
-}
-
-/* 🌟 SECCIÓN “POR QUÉ ELEGIR A ALBERTO NEGRETE” */
+/* SECCIÓN “POR QUÉ ELEGIR A ALBERTO NEGRETE” */
 .about-section {
   position: relative;
   background-color: #1b1f1b;
@@ -118,7 +91,6 @@
   z-index: 5;
 }
 
-/* Contenedor principal */
 .about-container {
   display: flex;
   align-items: center;
@@ -129,7 +101,6 @@
   gap: 60px;
 }
 
-/* 📸 Imagen fija y centrada */
 .about-image {
   flex: 1 1 45%;
   display: flex;
@@ -140,7 +111,7 @@
 
 .image-wrapper {
   position: sticky;
-  top: 100px; /* mantiene la imagen visible */
+  top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,7 +131,6 @@
   transform: scale(1.03);
 }
 
-/* 📝 Texto del lado derecho */
 .about-text {
   flex: 1 1 45%;
   opacity: 0;
@@ -174,12 +144,14 @@
 }
 
 .about-text h2 {
+  font-weight: 200;
   font-size: 2.4rem;
   margin-bottom: 15px;
   color: #ffffff;
 }
 
 .about-text p {
+  font-weight: 200;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 25px;
@@ -187,6 +159,7 @@
 }
 
 .about-text ul {
+  font-weight: 100;
   list-style: none;
   padding: 0;
   font-size: 1rem;
@@ -199,7 +172,6 @@
   font-weight: bold;
 }
 
-/* ✨ Animaciones */
 .fade-up {
   opacity: 0;
   transform: translateY(50px);
@@ -211,7 +183,6 @@
   transform: translateY(0) !important;
 }
 
-/* 📱 Responsivo ABOUT */
 @media (max-width: 900px) {
   .about-container {
     flex-direction: column;
@@ -225,5 +196,36 @@
 
   .image-wrapper img {
     max-width: 90%;
+  }
+}
+
+/***************************************************************************************/
+
+/* MAPA */
+.map-container {
+  width: 100%;
+  filter: grayscale(100%);
+  margin-top: -5px;
+  margin-bottom: -10px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-content button {
+    padding: 12px 25px;
+    font-size: 0.95rem;
   }
 }
