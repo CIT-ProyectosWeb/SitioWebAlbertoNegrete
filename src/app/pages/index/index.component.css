@@ -222,7 +222,172 @@
 
 /***************************************************************************************/
 
+/* Sección Historia y Trayectoria */
+.historia-trayectoria-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    margin-bottom: -80px;
+}
 
+.historia-trayectoria-content {
+    max-width: 700px;
+    width: 100%;
+}
+
+.historia-trayectoria-img {
+    display: block;
+    margin: 0 auto 30px auto;
+    width: auto;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.historia-trayectoria-title {
+    font-weight: 300;
+    font-size: 3rem;
+    color: #ce5b0c;
+    margin-bottom: 12px;
+}
+
+.historia-trayectoria-text {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #444;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .historia-trayectoria-img {
+        height: 360px;
+    }
+
+    .historia-trayectoria-title {
+        font-size: 1.6rem;
+    }
+
+    .historia-trayectoria-text {
+        font-size: 1rem;
+    }
+}
+
+/***************************************************************************************/
+
+/* Línea del Tiempo */
+
+.linea-tiempo-container {
+  background-color: #f8f8f8;
+  padding: 80px 20px;
+  position: relative;
+}
+
+.linea-tiempo {
+  margin-top: 50px;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.linea-tiempo::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #ce5b0c;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 4px;
+}
+
+/* Eventos */
+.evento {
+  padding: 20px 40px;
+  position: relative;
+  width: 50%;
+}
+
+.evento .content {
+  background: #f9f9f9;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.evento h3 {
+  color: #ce5b0c;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+
+.evento p {
+  color: #444;
+  line-height: 1.6;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* Lado izquierdo */
+.evento.left {
+  left: -80px;
+  text-align: right;
+}
+
+/* Lado derecho */
+.evento.right {
+  left: 50%;
+}
+
+/* Círculos en la línea */
+.evento::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  background-color: #ce5b0c;
+  border: 3px solid #fff;
+  top: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.evento.right::before {
+  left: -10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .linea-tiempo::after {
+    left: 20px;
+  }
+
+  .evento {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+
+  .evento.left,
+  .evento.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .evento::before {
+    left: 10px;
+  }
+}
 
 /***************************************************************************************/
 
