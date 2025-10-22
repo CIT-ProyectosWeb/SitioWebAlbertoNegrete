@@ -1,3 +1,84 @@
 <app-navbar></app-navbar>
 
+<!-- Carruseles -->
+<section class="capacitaciones-section">
+  <h1 class="titulo-seccion">CAPACITACIONES</h1>
+  <div class="linea"></div>
+
+  <div class="carrusel" *ngFor="let grupo of [capacitaciones1, capacitaciones2, capacitaciones3]; let i = index">
+    <button class="flecha izquierda" (click)="moverIzquierda(i)">&#10094;</button>
+
+    <div class="carrusel-contenedor" #carrusel1 *ngIf="i === 0">
+      <div class="tarjeta" *ngFor="let cap of grupo">
+        <img [src]="cap.imagen" [alt]="cap.titulo" />
+        <h3>{{ cap.titulo }}</h3>
+        <p>{{ cap.descripcion }}</p>
+      </div>
+    </div>
+
+    <div class="carrusel-contenedor" #carrusel2 *ngIf="i === 1">
+      <div class="tarjeta" *ngFor="let cap of grupo">
+        <img [src]="cap.imagen" [alt]="cap.titulo" />
+        <h3>{{ cap.titulo }}</h3>
+        <p>{{ cap.descripcion }}</p>
+      </div>
+    </div>
+
+    <div class="carrusel-contenedor" #carrusel3 *ngIf="i === 2">
+      <div class="tarjeta" *ngFor="let cap of grupo">
+        <img [src]="cap.imagen" [alt]="cap.titulo" />
+        <h3>{{ cap.titulo }}</h3>
+        <p>{{ cap.descripcion }}</p>
+      </div>
+    </div>
+
+    <button class="flecha derecha" (click)="moverDerecha(i)">&#10095;</button>
+  </div>
+</section>
+
+<!-- NUEVA SECCIÓN DE ESTADÍSTICAS -->
+<section class="estadisticas-section">
+  <div class="estadistica">
+    <h2>15+</h2>
+    <p>Años de Experiencia</p>
+  </div>
+  <div class="separador"></div>
+
+  <div class="estadistica">
+    <h2>120+</h2>
+    <p>Empresas Capacitadas</p>
+  </div>
+  <div class="separador"></div>
+
+  <div class="estadistica">
+    <h2>3500+</h2>
+    <p>Personas Entrenadas</p>
+  </div>
+  <div class="separador"></div>
+
+  <div class="estadistica">
+    <h2>45+</h2>
+    <p>Conferencias Impartidas</p>
+  </div>
+</section>
+
+<!-- NUEVA SECCIÓN DE CONFERENCIAS -->
+
+<section class="conferencias-section">
+  <h1 class="titulo-seccion">CONFERENCIAS</h1>
+  <div class="linea"></div>
+
+  <div class="conferencias-grid">
+    <div class="conferencia" *ngFor="let conf of conferencias">
+      <div class="overlay">
+        <h3>{{ conf.titulo }}</h3>
+        <p>{{ conf.descripcion }}</p>
+      </div>
+      <img [src]="conf.imagen" [alt]="conf.titulo" />
+    </div>
+  </div>
+</section>
+
+
 <app-footer></app-footer>
+

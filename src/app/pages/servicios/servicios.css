@@ -1,0 +1,281 @@
+.capacitaciones-section {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 80px 5%;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1b1b1b;
+}
+
+.linea {
+  width: 80px;
+  height: 4px;
+  background-color: #ce5b0c;
+  margin: 15px auto 50px;
+  border-radius: 10px;
+}
+
+.carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+.carrusel-contenedor {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 10px;
+  scrollbar-width: none;
+}
+
+.carrusel-contenedor::-webkit-scrollbar {
+  display: none;
+}
+
+.tarjeta {
+  flex: 0 0 calc(25% - 20px); /* 4 visibles */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ce5b0c;
+}
+
+.flecha {
+  background: #888;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.flecha:hover {
+  background: #ce5b0c;
+}
+
+.flecha.izquierda {
+  position: absolute;
+  left: -50px;
+}
+
+.flecha.derecha {
+  position: absolute;
+  right: -50px;
+}
+
+.tarjeta h3 {
+  font-size: 1.2rem;      /* 🔹 Tamaño del título dentro de cada tarjeta */
+  font-weight: 500;       /* 🔹 Grosor del texto */
+  color: #1b1b1b;         /* 🔹 Color (puedes cambiarlo si gustas) */
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;       /* O “center” si prefieres centrado */
+}
+
+.capacitaciones-section {
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* ============================== */
+/* SECCIÓN DE ESTADÍSTICAS */
+/* ============================== */
+
+.estadisticas-section {
+  background-color: #ce5b0c; /* Naranja institucional */
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 70px 5%;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-top: -80px;       /* más pegado al carrusel */
+  margin-bottom: 80px; /* más separado del footer */
+}
+
+.estadistica {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.estadistica h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.estadistica p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.separador {
+  width: 2px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .estadisticas-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .separador {
+    display: none;
+  }
+
+  .estadistica h2 {
+    font-size: 2.2rem;
+  }
+
+  .estadistica p {
+    font-size: 1rem;
+  }
+}
+
+
+/* ============================== */
+/* 🎤 SECCIÓN DE CONFERENCIAS */
+/* ============================== */
+
+.conferencias-section {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 80px 5%;
+}
+
+.titulo-seccion {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1b1b1b;
+}
+
+.linea {
+  width: 80px;
+  height: 4px;
+  background-color: #ce5b0c;
+  margin: 15px auto 50px;
+  border-radius: 10px;
+}
+
+.conferencias-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+  justify-items: center;
+  margin-top: 40px;
+}
+
+.conferencia {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 180px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.conferencia img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.conferencia:hover img {
+  filter: brightness(60%);
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(206, 91, 12, 0.9);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.conferencia:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.overlay p {
+  font-size: 0.85rem;
+  font-weight: 300;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 1200px) {
+  .conferencias-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .conferencias-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .conferencias-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px) {
+  .conferencias-grid {
+    grid-template-columns: 1fr;
+  }
+}
