@@ -5,7 +5,7 @@
   <h1 class="titulo-seccion">CAPACITACIONES</h1>
   <div class="linea"></div>
 
-  <div class="carrusel" *ngFor="let grupo of [capacitaciones1, capacitaciones2, capacitaciones3]; let i = index">
+  <div class="carrusel" *ngFor="let grupo of [capacitaciones1, capacitaciones2]; let i = index">
     <button class="flecha izquierda" (click)="moverIzquierda(i)">&#10094;</button>
 
     <div class="carrusel-contenedor" #carrusel1 *ngIf="i === 0">
@@ -17,14 +17,6 @@
     </div>
 
     <div class="carrusel-contenedor" #carrusel2 *ngIf="i === 1">
-      <div class="tarjeta" *ngFor="let cap of grupo">
-        <img [src]="cap.imagen" [alt]="cap.titulo" />
-        <h3>{{ cap.titulo }}</h3>
-        <p>{{ cap.descripcion }}</p>
-      </div>
-    </div>
-
-    <div class="carrusel-contenedor" #carrusel3 *ngIf="i === 2">
       <div class="tarjeta" *ngFor="let cap of grupo">
         <img [src]="cap.imagen" [alt]="cap.titulo" />
         <h3>{{ cap.titulo }}</h3>
@@ -64,17 +56,22 @@
 
 <!-- NUEVA SECCIÓN DE CONFERENCIAS -->
 
-<section class="conferencias-section">
-  <h1 class="titulo-seccion">CONFERENCIAS</h1>
-  <div class="linea"></div>
+<section class="conferencias-categorias">
+  <h1 class="conferencias-titulo-seccion">CONFERENCIAS</h1>
+  <p class="conferencias-subtitulo">(Desarrollo personal, liderazgo, bienestar emocional y trabajo en equipo)</p>
+  <div class="conferencias-linea"></div>
 
-  <div class="conferencias-grid">
-    <div class="conferencia" *ngFor="let conf of conferencias">
-      <div class="overlay">
-        <h3>{{ conf.titulo }}</h3>
-        <p>{{ conf.descripcion }}</p>
+  <div class="conferencias-categoria" *ngFor="let cat of conferenciasPorCategoria">
+    <h2 class="conferencias-titulo-categoria">{{ cat.categoria }}</h2>
+
+    <div class="conferencias-tarjetas">
+      <div class="conferencias-tarjeta" *ngFor="let conf of cat.items">
+        <div class="conferencias-overlay">
+          <h3>{{ conf.titulo }}</h3>
+          <p>{{ conf.descripcion }}</p>
+        </div>
+        <img [src]="conf.imagen" [alt]="conf.titulo" />
       </div>
-      <img [src]="conf.imagen" [alt]="conf.titulo" />
     </div>
   </div>
 </section>

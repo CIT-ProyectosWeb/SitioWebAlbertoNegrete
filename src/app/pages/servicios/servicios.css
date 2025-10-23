@@ -117,7 +117,7 @@
   box-sizing: border-box;
 
   margin-top: -80px;       /* más pegado al carrusel */
-  margin-bottom: 80px; /* más separado del footer */
+  margin-bottom: 0px; /* más separado del footer */
 }
 
 .estadistica {
@@ -164,24 +164,29 @@
   }
 }
 
-
 /* ============================== */
-/* 🎤 SECCIÓN DE CONFERENCIAS */
+/* CONFERENCIAS — Overlay con título y descripción */
 /* ============================== */
 
-.conferencias-section {
+.conferencias-categorias {
   background-color: #f7f7f7;
   text-align: center;
   padding: 80px 5%;
 }
 
-.titulo-seccion {
-  font-size: 2.5rem;
+.conferencias-titulo-seccion {
+  font-size: 2.8rem;
   font-weight: 500;
   color: #1b1b1b;
 }
 
-.linea {
+.conferencias-subtitulo {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.conferencias-linea {
   width: 80px;
   height: 4px;
   background-color: #ce5b0c;
@@ -189,93 +194,145 @@
   border-radius: 10px;
 }
 
-.conferencias-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 10px;
-  justify-items: center;
-  margin-top: 40px;
+.conferencias-categoria {
+  margin-bottom: 70px;
 }
 
-.conferencia {
+.conferencias-titulo-categoria {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #ce5b0c;
+  margin-bottom: 25px;
+}
+
+.conferencias-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.conferencias-tarjeta {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  max-width: 180px;
-  border-radius: 10px;
-  cursor: pointer;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
-.conferencia img {
+.conferencias-tarjeta img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease, filter 0.4s ease;
   display: block;
-  border-radius: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  z-index: 1;
+  position: relative;
 }
 
-.conferencia:hover img {
-  filter: brightness(60%);
+/* Efecto visual al pasar el cursor */
+.conferencias-tarjeta:hover img {
   transform: scale(1.05);
+  filter: brightness(65%);
 }
 
-.overlay {
+/* Contenedor del overlay */
+.conferencias-tarjeta {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  display: flex;             /* 🔹 asegura que el contenedor no agregue desplazamiento */
+  justify-content: center;
+  align-items: center;
+}
+
+.conferencias-tarjeta img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+  display: block;
+}
+
+/* Fondo naranja */
+.conferencias-overlay {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 0;                   /*  garantiza que empiece exactamente desde la izquierda */
   width: 100%;
   height: 100%;
   background-color: rgba(206, 91, 12, 0.9);
   color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: center;   /*  centra verticalmente el contenido */
+  align-items: center;       /*  centra horizontalmente */
   text-align: center;
   opacity: 0;
   transition: opacity 0.4s ease;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 0 15px;           /*  margen interno equilibrado */
+  border-radius: 15px;
+  z-index: 2;
+  box-sizing: border-box;    /*  evita que el padding desplace el overlay */
 }
 
-.conferencia:hover .overlay {
+/* Hover: mostrar overlay */
+.conferencias-tarjeta:hover .conferencias-overlay {
   opacity: 1;
 }
 
-.overlay h3 {
-  font-size: 1rem;
-  margin-bottom: 5px;
-  font-weight: 600;
+/* Efecto de texto fade-up */
+.conferencias-overlay h3,
+.conferencias-overlay p {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
-.overlay p {
-  font-size: 0.85rem;
+.conferencias-tarjeta:hover .conferencias-overlay h3,
+.conferencias-tarjeta:hover .conferencias-overlay p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Título */
+.conferencias-overlay h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Descripción */
+.conferencias-overlay p {
+  font-size: 0.9rem;
   font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
-/* 📱 RESPONSIVO */
-@media (max-width: 1200px) {
-  .conferencias-grid {
-    grid-template-columns: repeat(5, 1fr);
+/* Hover en la imagen */
+.conferencias-tarjeta:hover img {
+  transform: scale(1.05);
+  filter: brightness(65%);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .conferencias-overlay h3 {
+    font-size: 1rem;
   }
-}
 
-@media (max-width: 900px) {
-  .conferencias-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .conferencias-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 400px) {
-  .conferencias-grid {
-    grid-template-columns: 1fr;
+  .conferencias-overlay p {
+    font-size: 0.85rem;
   }
 }
