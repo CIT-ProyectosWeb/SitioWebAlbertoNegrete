@@ -393,6 +393,59 @@
 
 /***************************************************************************************/
 
+/* Sección Logos */
+
+.colaboraciones-section {
+  padding: 60px 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.colaboraciones-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.colaboraciones-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  align-items: center;
+  justify-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo-item img {
+  width: 120px;
+  height: auto;
+  filter: grayscale(100%);
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+.logo-item img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .colaboraciones-title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .logo-item img {
+    width: 90px;
+  }
+}
+
+/***************************************************************************************/
+
 /* Mapa debajo */
 .map-container {
   width: 100%;
