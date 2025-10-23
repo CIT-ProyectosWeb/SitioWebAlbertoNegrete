@@ -280,3 +280,70 @@
 
 /***************************************************************************************/
 
+/* Sección Confianza */
+.confianza-section {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #f9f9f9;
+}
+
+.confianza-title {
+    font-size: 2.3rem;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 300;
+}
+
+.confianza-diferenciadores {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.confianza-item {
+    background-color: #ce5b0c;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 30px 40px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+}
+
+.confianza-item h4 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.confianza-item p {
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.confianza-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .confianza-diferenciadores {
+        flex-direction: column;
+        align-items: center;
+    }
+    .confianza-item {
+        width: 80%;
+        max-width: 320px;
+    }
+}
+
+/***************************************************************************************/
+
+
+
+
+
