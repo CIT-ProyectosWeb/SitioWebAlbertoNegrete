@@ -1,94 +1,27 @@
-/* Contenedor principal */
-.contact-section {
-  width: 100%;
-  font-family: 'Poppins', sans-serif;
-  color: #0d1b2a;
-  background-color: #ffffff;
-}
 
-/* Sección superior (texto + imagen) */
-.contact-container {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 600px; /* 👈 ajusta la altura general */
-}
+/* Contacto */
 
-/* Columna izquierda */
-.contact-form {
-  flex: 1;
-  padding: 80px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #fff;
-}
 
-.contact-form h2 {
-  font-weight: 700;
-  margin-bottom: 15px;
-}
 
-.contact-form p {
-  margin: 3px 0;
-  font-weight: 300;
-  color: #333;
-}
 
-.input-group {
-  display: flex;
-  gap: 10px;
-  margin-top: 25px;
-}
 
-.input-group input {
-  flex: 1;
-}
 
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-bottom: 2px solid #ccc;
-  font-weight: 300;
-  margin-bottom: 15px;
-  transition: border-color 0.3s ease;
-}
 
-input:focus,
-textarea:focus {
-  outline: none;
-  border-bottom-color: #0d1b2a;
-}
 
-button {
-  background-color: #0d1b2a;
-  color: #fff;
-  border: none;
-  padding: 12px;
-  width: 200px;
-  font-weight: 100;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-button:hover {
-  background-color: #1b263b;
-}
 
-/* Columna derecha: imagen */
-.contact-image {
-  flex: 1;
-  height: 100%;
-  overflow: hidden;
-}
 
-.contact-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
+
+
+
+
+
+
+
+
+
+/***************************************************************************************/
 
 /* Mapa debajo */
 .map-container {
