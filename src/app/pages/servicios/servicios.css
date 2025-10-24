@@ -86,9 +86,9 @@
 }
 
 .tarjeta h3 {
-  font-size: 1.2rem;      /* 🔹 Tamaño del título dentro de cada tarjeta */
-  font-weight: 500;       /* 🔹 Grosor del texto */
-  color: #1b1b1b;         /* 🔹 Color (puedes cambiarlo si gustas) */
+  font-size: 1.2rem;      /* Tamaño del título dentro de cada tarjeta */
+  font-weight: 500;       /* Grosor del texto */
+  color: #1b1b1b;       /* Color (puedes cambiarlo si gustas) */
   margin-top: 10px;
   margin-bottom: 5px;
   text-align: center;       /* O “center” si prefieres centrado */
@@ -110,7 +110,7 @@
   justify-content: center;
   align-items: center;
   gap: 80px;
-  padding: 100px 5%;      /* 🔥 más alto para centrar el texto verticalmente */
+  padding: 100px 5%;      /* más alto para centrar el texto verticalmente */
   text-align: center;
   flex-wrap: wrap;
   width: 100%;
@@ -126,7 +126,7 @@
 .estadistica h2 {
   font-size: 3.2rem;
   font-weight: 700;
-  margin: 0 0 15px 0;      /* 🔹 equilibrio superior e inferior */
+  margin: 0 0 15px 0;      /* equilibrio superior e inferior */
   line-height: 1.2;
 }
 
@@ -138,7 +138,7 @@
 
 .separador {
   width: 2px;
-  height: 100px;           /* 🔹 más alto para equilibrar el espacio visual */
+  height: 100px;           /* más alto para equilibrar el espacio visual */
   background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -246,7 +246,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   cursor: pointer;
-  display: flex;             /* 🔹 asegura que el contenedor no agregue desplazamiento */
+  display: flex;             /* asegura que el contenedor no agregue desplazamiento */
   justify-content: center;
   align-items: center;
 }
