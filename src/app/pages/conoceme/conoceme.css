@@ -71,7 +71,7 @@
 /* Sección Misión y Visión */
 
 .mision-vision {
-  background: linear-gradient(135deg, #f6f7fb, #ffffff);
+  background-color: #FFFF;
   padding: 80px 20px;
   text-align: center;
   font-family: "Poppins", sans-serif;
@@ -81,7 +81,7 @@
 .mision-vision .container {
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: -80px;
+  margin-top: -20px;
 }
 
 .section-title {
