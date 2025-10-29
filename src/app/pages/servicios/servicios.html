@@ -1,8 +1,10 @@
 <app-navbar></app-navbar>
 
+
 <!-- Carruseles -->
 <section class="capacitaciones-section">
   <h1 class="titulo-seccion">CAPACITACIONES</h1>
+
   <div class="linea"></div>
 
   <div class="carrusel" *ngFor="let grupo of [capacitaciones1, capacitaciones2]; let i = index">
@@ -27,6 +29,7 @@
     <button class="flecha derecha" (click)="moverDerecha(i)">&#10095;</button>
   </div>
 </section>
+
 
 <!-- SECCIÓN DE ESTADÍSTICAS -->
 <section class="estadisticas-section">
@@ -54,8 +57,8 @@
   </div>
 </section>
 
-<!-- NUEVA SECCIÓN DE CONFERENCIAS -->
 
+<!-- NUEVA SECCIÓN DE CONFERENCIAS -->
 <section class="conferencias-categorias">
   <h1 class="conferencias-titulo-seccion">CONFERENCIAS</h1>
   <p class="conferencias-subtitulo">(Desarrollo personal, liderazgo, bienestar emocional y trabajo en equipo)</p>
