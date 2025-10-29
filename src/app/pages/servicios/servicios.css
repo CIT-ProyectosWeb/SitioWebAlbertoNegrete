@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 70px;
+  margin-bottom: 10px;
 }
 
 .carrusel-contenedor {
@@ -235,7 +235,7 @@
 /* Efecto visual al pasar el cursor */
 .conferencias-tarjeta:hover img {
   transform: scale(1.05);
-  filter: brightness(65%);
+  filter: brightness(80%);
 }
 
 /* Contenedor del overlay */
@@ -267,7 +267,7 @@
   left: 0;                   /*  garantiza que empiece exactamente desde la izquierda */
   width: 100%;
   height: 100%;
-  background-color: rgba(206, 91, 12, 0.9);
+  background-color: rgba(206, 91, 12, 0.5);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -336,3 +336,41 @@
     font-size: 0.85rem;
   }
 }
+
+/* ============================== */
+/* SECCIÓN DE COACHING */
+/* ============================== */
+
+.coaching-section {
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 100px 5%;
+}
+
+.coaching-section .titulo-seccion {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #1b1b1b;
+  margin-top: -90px;
+}
+
+.coaching-section .linea {
+  width: 80px;
+  height: 4px;
+  background-color: #ce5b0c;
+  margin: 15px auto 50px;
+  border-radius: 10px;
+}
+
+.coaching-section .carrusel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coaching-section .tarjeta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ce5b0c;
+}
+
