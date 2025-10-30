@@ -5,6 +5,8 @@
 <section class="capacitaciones-section">
   <h1 class="titulo-seccion">CAPACITACIONES</h1>
 
+  <p class="conferencias-subtitulo">(Cursos, Talleres y Team Building)</p>
+  
   <div class="linea"></div>
 
   <div class="carrusel" *ngFor="let grupo of [capacitaciones1, capacitaciones2]; let i = index">
@@ -30,6 +32,26 @@
   </div>
 </section>
 
+<!-- Nueva sección COACHING (💡 antes de estadísticas) -->
+<section class="coaching-section">
+  <h1 class="titulo-seccion">COACHING</h1>
+  <p class="conferencias-subtitulo">(Crecimiento personal y liderazgo transformacional)</p>
+  <div class="linea"></div>
+
+  <div class="carrusel">
+    <button class="flecha izquierda" (click)="moverIzquierdaCoaching()">&#10094;</button>
+
+    <div class="carrusel-contenedor" #carruselCoaching>
+      <div class="tarjeta" *ngFor="let coach of coaching">
+        <img [src]="coach.imagen" [alt]="coach.titulo" />
+        <h3>{{ coach.titulo }}</h3>
+        <p>{{ coach.descripcion }}</p>
+      </div>
+    </div>
+
+    <button class="flecha derecha" (click)="moverDerechaCoaching()">&#10095;</button>
+  </div>
+</section>
 
 <!-- SECCIÓN DE ESTADÍSTICAS -->
 <section class="estadisticas-section">
@@ -79,6 +101,4 @@
   </div>
 </section>
 
-
 <app-footer></app-footer>
-

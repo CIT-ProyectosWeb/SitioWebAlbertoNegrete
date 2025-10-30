@@ -13,6 +13,7 @@ import { Footer } from '../../components/footer/footer';
 export class Servicios implements AfterViewInit {
   @ViewChild('carrusel1') carrusel1!: ElementRef;
   @ViewChild('carrusel2') carrusel2!: ElementRef;
+  @ViewChild('carruselCoaching') carruselCoaching!: ElementRef;
 
   carruseles: ElementRef[] = [];
 
@@ -30,18 +31,30 @@ export class Servicios implements AfterViewInit {
     if (carrusel) carrusel.scrollBy({ left: -350, behavior: 'smooth' });
   }
 
+  /* Métodos de movimiento del carrusel de coaching */
+  moverDerechaCoaching() {
+  const carrusel = this.carruselCoaching?.nativeElement;
+  if (carrusel) carrusel.scrollBy({ left: 350, behavior: 'smooth' });
+}
+
+  moverIzquierdaCoaching() {
+  const carrusel = this.carruselCoaching?.nativeElement;
+  if (carrusel) carrusel.scrollBy({ left: -350, behavior: 'smooth' });
+}
+
+
   /* ===================================================== */
   /* CARRUSELES DE CAPACITACIONES (2 columnas) */
   /* ===================================================== */
 
   capacitaciones1 = [
+    { titulo: 'Team Building', imagen: 'https://picsum.photos/400/250?random=7', descripcion: 'Ejercicios vivenciales para fortalecer la confianza, comunicación y cohesión en el equipo.' },
     { titulo: 'Fortalecimiento del compromiso hacia la empresa', imagen: 'https://picsum.photos/400/250?random=1', descripcion: 'Estrategias para generar equipos más motivados, involucrados y orientados a resultados.' },
     { titulo: 'Planeación y gestión de la productividad', imagen: 'https://picsum.photos/400/250?random=2', descripcion: 'Aprende a planificar tareas y metas con enfoque SMART y resultados medibles.' },
     { titulo: 'Gestión del cambio', imagen: 'https://picsum.photos/400/250?random=3', descripcion: 'Aumenta la adaptabilidad y resiliencia organizacional ante nuevos desafíos.' },
     { titulo: 'Fortalecimiento de habilidades de liderazgo', imagen: 'https://picsum.photos/400/250?random=4', descripcion: 'Desarrolla competencias para dirigir, inspirar y guiar con empatía.' },
     { titulo: 'Fortalecimiento de habilidades para el manejo de personal', imagen: 'https://picsum.photos/400/250?random=5', descripcion: 'Mejora la comunicación, delegación y desarrollo de tus colaboradores.' },
     { titulo: 'Herramientas de coaching para un liderazgo eficiente', imagen: 'https://picsum.photos/400/250?random=6', descripcion: 'Aplica técnicas de coaching y PNL para potenciar a tu equipo.' },
-    { titulo: 'Team Building', imagen: 'https://picsum.photos/400/250?random=7', descripcion: 'Ejercicios vivenciales para fortalecer la confianza, comunicación y cohesión en el equipo.' },
     { titulo: 'Comunicación productiva entre departamentos', imagen: 'https://picsum.photos/400/250?random=8', descripcion: 'Mejora la interacción interna y la sinergia organizacional.' },
     { titulo: 'Comunicación asertiva y efectiva', imagen: 'https://picsum.photos/400/250?random=9', descripcion: 'Aprende a escuchar, expresarte y negociar con empatía.' },
     ];
@@ -56,6 +69,22 @@ export class Servicios implements AfterViewInit {
     { titulo: 'Manejo de conflictos', imagen: 'https://picsum.photos/400/250?random=7', descripcion: 'Aprende estrategias para resolver problemas de forma constructiva.' },
     ];
 
+/* ===================================================== */
+/* 🧠 COACHING — nuevo carrusel */
+/* ===================================================== */
+coaching = [
+  { titulo: 'Coaching de Vida', imagen: 'https://picsum.photos/400/250?random=31', descripcion: 'Descubre tu propósito y alinea tus acciones con lo que realmente te inspira.' },
+  { titulo: 'Coaching Ejecutivo', imagen: 'https://picsum.photos/400/250?random=32', descripcion: 'Desarrolla tu liderazgo y maximiza el potencial de tu equipo y organización.' },
+  { titulo: 'Coaching de Equipos', imagen: 'https://picsum.photos/400/250?random=33', descripcion: 'Fortalece la confianza, comunicación y colaboración entre tus colaboradores.' },
+  { titulo: 'Coaching Personal', imagen: 'https://picsum.photos/400/250?random=34', descripcion: 'Aprende a gestionar tus emociones y superar bloqueos personales.' },
+  { titulo: 'Coaching Transformacional', imagen: 'https://picsum.photos/400/250?random=35', descripcion: 'Cambia tu mentalidad para alcanzar metas que antes parecían imposibles.' },
+  { titulo: 'Liderazgo Consciente', imagen: 'https://picsum.photos/400/250?random=36', descripcion: 'Dirige con empatía, integridad y visión estratégica.' },
+  { titulo: 'Coaching de Comunicación', imagen: 'https://picsum.photos/400/250?random=37', descripcion: 'Aprende a escuchar activamente y comunicarte con impacto.' },
+  { titulo: 'Empoderamiento Personal', imagen: 'https://picsum.photos/400/250?random=38', descripcion: 'Reconoce tus fortalezas y asume el control de tu desarrollo personal.' },
+  { titulo: 'Coaching para la Resiliencia', imagen: 'https://picsum.photos/400/250?random=39', descripcion: 'Recupera tu equilibrio ante el cambio y las adversidades.' },
+  { titulo: 'Mentoring & Coaching', imagen: 'https://picsum.photos/400/250?random=40', descripcion: 'Combina la guía estratégica del mentoring con el enfoque reflexivo del coaching.' }
+];
+    
  /* ===================================================== */
 /* 🎤 CONFERENCIAS — organizadas por categorías */
 /* ===================================================== */
